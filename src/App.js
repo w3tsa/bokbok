@@ -5,6 +5,7 @@ import "./App.css";
 /* pages */
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 /* components */
 import Navbar from "./components/Navbar";
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
