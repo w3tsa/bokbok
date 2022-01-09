@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav>
       <h3>
-        <Link to="/">Messenger</Link>
+        <Link to="/">BokBok</Link>
       </h3>
       <div>
         <Link to="/register">Register</Link>
