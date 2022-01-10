@@ -82,9 +82,9 @@ export default function Profile() {
     // localStorage.getItem("defaultImg") ||
     Images[Math.floor(Math.random() * Images.length)];
 
-  function localSaveImage() {
-    window.localStorage.setItem("defaultImg", defaultAvatar);
-  }
+  // function localSaveImage() {
+  //   window.localStorage.setItem("defaultImg", defaultAvatar);
+  // }
 
   return (
     <section>

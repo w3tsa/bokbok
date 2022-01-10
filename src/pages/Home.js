@@ -39,6 +39,7 @@ export default function Home() {
         {chat ? (
           <>
             <div className="messages_user">
+              <img src={chat.avatar} alt="user" id="messaging_user" />
               <h3>{chat.name}</h3>
             </div>
             <MessageForm />
