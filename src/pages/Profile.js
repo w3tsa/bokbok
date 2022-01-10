@@ -33,6 +33,8 @@ export default function Profile() {
           avatarPath: "",
         });
 
+        localStorage.removeItem("defaultImg");
+
         navigate("/");
       }
     } catch (error) {
@@ -73,9 +75,16 @@ export default function Profile() {
 
       uploading();
     }
+    localSaveImage();
   }, [img]);
 
-  const defaultAvatar = Images[Math.floor(Math.random() * Images.length)];
+  let defaultAvatar =
+    localStorage.getItem("defaultImg") ||
+    Images[Math.floor(Math.random() * Images.length)];
+
+  function localSaveImage() {
+    window.localStorage.setItem("defaultImg", defaultAvatar);
+  }
 
   return (
     <section>
