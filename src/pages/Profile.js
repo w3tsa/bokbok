@@ -33,7 +33,7 @@ export default function Profile() {
           avatarPath: "",
         });
 
-        localStorage.removeItem("defaultImg");
+        // localStorage.removeItem("defaultImg");
 
         navigate("/");
       }
@@ -75,11 +75,11 @@ export default function Profile() {
 
       uploading();
     }
-    localSaveImage();
+    // localSaveImage();
   }, [img]);
 
   let defaultAvatar =
-    localStorage.getItem("defaultImg") ||
+    // localStorage.getItem("defaultImg") ||
     Images[Math.floor(Math.random() * Images.length)];
 
   function localSaveImage() {
