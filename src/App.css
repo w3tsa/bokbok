@@ -378,3 +378,25 @@ section .form {
     max-width: 100%;
   }
 }
+
+/* send */
+.send {
+  background: linear-gradient(
+    90deg,
+    rgba(129, 3, 255, 1) 0%,
+    rgba(224, 2, 255, 1) 100%
+  );
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--color-4);
+  color: var(--color-2);
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.send:active {
+  transform: scale(0.9);
+}
