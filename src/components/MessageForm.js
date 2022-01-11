@@ -1,9 +1,9 @@
 /* local import */
 import Attachment from "./svg/Attachment";
 import Send from "./svg/Send";
-function MessageForm() {
+function MessageForm({ handleSubmit, text, setText, setImg }) {
   return (
-    <form className="message_form">
+    <form className="message_form" onSubmit={handleSubmit}>
       <label htmlFor="img">
         <Attachment />
       </label>
@@ -12,9 +12,15 @@ function MessageForm() {
         id="img"
         accept="image/*"
         style={{ display: "none" }}
+        onChange={(e) => setImg(e.target.files[0])}
       />
       <div>
-        <input type="text" placeholder="Enter message" />
+        <input
+          type="text"
+          placeholder="Enter message"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
       </div>
       <div>
         <button className="send">
