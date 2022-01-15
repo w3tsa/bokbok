@@ -3,16 +3,39 @@
 }
 
 :root {
-  --color-1: rgb(238, 236, 236);
+  --color-1: rgb(223, 219, 219);
   --color-2: #242526;
   --color-3: #c214f7;
   --color-4: grey;
   --color-5: #eb4034;
-  --color-6: white;
+  --color-6: rgb(238, 236, 236);
+  --bg-color: #fff;
+  --text-color: #000;
 }
 
 .dark-mode {
   filter: invert(1) hue-rotate(180deg);
+}
+
+[data-theme="dark"] {
+  --bg-color: #3f3f3f;
+  --text-color: #fff;
+  --color-6: rgb(73, 73, 73);
+  --color-1: rgb(44, 44, 44);
+  --color-2: white;
+}
+
+[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: #000000;
+  --color-6: rgb(238, 236, 236);
+  --color-1: rgb(223, 219, 219);
+  --color-2: #242526;
+}
+
+.App {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 nav {
@@ -87,6 +110,12 @@ section .form {
 .error {
   text-align: center;
   color: var(--color-5);
+}
+
+.darkBtn {
+  position: absolute;
+  margin-top: 3px;
+  right: 200px;
 }
 
 /* loader */

@@ -125,7 +125,7 @@ export default function Home() {
           <>
             <div className="messages_user">
               {/* <img src={chat.avatar} alt="user" id="messaging_user" /> */}
-              <h3>{chat.name}</h3>
+              <h3>{chat.name.toUpperCase()}</h3>
             </div>
             <div className="messages">
               {messages.length &&

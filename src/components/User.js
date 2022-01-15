@@ -34,7 +34,7 @@ export default function User({ chat, user1, user, selectUser }) {
               alt="avatar"
               className="avatar"
             />
-            <h4>{user.name}</h4>
+            <h4>{user.name.toUpperCase()}</h4>
             {data?.from !== user1 && data?.unread && (
               <small className="unread">New</small>
             )}

@@ -6,7 +6,11 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+/* local imports */
+import Moon from "./svg/Moon";
+import Sun from "./svg/Sun";
+
+export default function Navbar(props) {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   async function handleClick() {
@@ -27,6 +31,9 @@ export default function Navbar() {
             <Link to={"/profile"}>Profile</Link>
             <button className="btn" onClick={handleClick}>
               Logout
+            </button>
+            <button className="darkBtn" onClick={props.toggleDarkButton}>
+              {props.darkMode ? <Sun /> : <Moon />}
             </button>
           </>
         ) : (
