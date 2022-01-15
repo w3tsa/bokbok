@@ -24,7 +24,7 @@ export default function Home() {
   const [users, setUsers] = useState([]);
   const [chat, setChat] = useState("");
   const [text, setText] = useState("");
-  const [img, setImg] = useState();
+  const [img, setImg] = useState("");
   const [messages, setMessages] = useState([]);
 
   const user1 = auth.currentUser.uid;
@@ -85,6 +85,9 @@ export default function Home() {
       const dlUrl = await getDownloadURL(ref(storage, snap.ref.fullPath));
       url = dlUrl;
     }
+    if (text === "") {
+      return;
+    }
     // messages => chat => id
     await addDoc(collection(db, "messages", id, "chat"), {
       text,
@@ -104,6 +107,7 @@ export default function Home() {
     });
 
     setText("");
+    setImg("");
   }
   return (
     <div className="home_container">
