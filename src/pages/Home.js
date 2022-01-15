@@ -62,7 +62,7 @@ export default function Home() {
     });
 
     const docSnap = await getDoc(doc(db, "lastMessage", id));
-    if (docSnap.data()?.from !== user1) {
+    if (docSnap.data() && docSnap.data().from !== user1) {
       await updateDoc(doc(db, "lastMessage", id), {
         unread: false,
       });
