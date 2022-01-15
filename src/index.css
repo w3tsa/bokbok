@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  font-family: "Playfair Display SC", serif;
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #3f3f3f;
+  color: white;
 }
 
 code {
