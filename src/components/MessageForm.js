@@ -20,6 +20,7 @@ function MessageForm({ handleSubmit, text, setText, setImg }) {
           placeholder="Enter message"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          style={{ fontSize: "18px" }}
         />
       </div>
       <div>
