@@ -40,6 +40,9 @@ export default function Navbar(props) {
           <>
             <Link to="/register">Register</Link>
             <Link to="/login">Login</Link>
+            <button className="darkBtn-auth" onClick={props.toggleDarkButton}>
+              {props.darkMode ? <Sun /> : <Moon />}
+            </button>
           </>
         )}
       </div>

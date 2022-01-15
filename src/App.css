@@ -119,6 +119,12 @@ section .form {
   right: 200px;
 }
 
+.darkBtn-auth {
+  position: absolute;
+  margin-top: -3px;
+  right: 200px;
+}
+
 /* loader */
 .loader {
   animation: rotate 1s infinite;
